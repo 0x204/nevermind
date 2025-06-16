@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Проверка CAPTCHA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      background: #181e2b;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .captcha-box {
+      position: relative;
+      z-index: 10;
+      padding: 1rem;
+      width: 100%;
+      max-width: 48rem;
+    }
+    .captcha-text {
+      color: white;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    .logo {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 16px;
+    }
+    .verify-text {
+      color: #a0aec0;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .ray-id {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #4a5568;
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.svg" alt="Logo" class="logo">
+    <p class="verify-text">Пожалуйста, подтвердите, что вы не робот</p>
+    <div class="captcha-box">
+      <p class="captcha-text">::CAPTCHA_BOX::</p>
+    </div>
+  </div>
+  <div class="ray-id">
+    ::RAY_ID::<br>
+    Country: ::GEO::
+  </div>
+</body>
+</html>
