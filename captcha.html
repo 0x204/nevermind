@@ -38,16 +38,18 @@
       font-size: 1.1rem;
       margin-bottom: 32px;
     }
-    .captcha-box {
-      position: relative;
-      z-index: 10;
-      padding: 0;
-      width: auto;
-      max-width: none;
+    .captcha-box-wrapper {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      width: 100%;
+    }
+    .captcha-box {
+      display: block;
       margin: 0 auto;
+      padding: 0;
+      min-width: 0;
+      text-align: center;
     }
     .captcha-text {
       color: white;
@@ -72,8 +74,10 @@
   <div class="container">
     <img src="logo.svg" alt="Logo" class="logo">
     <p class="verify-text">Пожалуйста, подтвердите, что вы не робот</p>
-    <div class="captcha-box">
-      <p class="captcha-text">::CAPTCHA_BOX::</p>
+    <div class="captcha-box-wrapper">
+      <div class="captcha-box">
+        <p class="captcha-text">::CAPTCHA_BOX::</p>
+      </div>
     </div>
   </div>
   <div class="ray-id">
